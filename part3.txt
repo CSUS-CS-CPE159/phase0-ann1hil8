@@ -1,0 +1,44 @@
+-[spede] ~ 
+11:12:55 $ git clone git@github.com:CSUS-CS-CPE159/phase0-ann1hil8.git
+Cloning into 'phase0-ann1hil8'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 0), reused 8 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (10/10), done.
+-[spede] ~ 
+11:13:53 $ cd phase0-ann1hil8/01-hello-world/
+-[spede] ~/phase0-ann1hil8/01-hello-world {main *%=}
+11:16:53 $ make
+Done linking "build/random-os.dli" (with GDB enabled) at 1m.
+-[spede] ~/phase0-ann1hil8/01-hello-world {main *%=}
+11:17:00 $ 
+11:55:59 $ spede-target
+Launching SPEDE target to run in the background
+-[spede] ~/phase0-ann1hil8/01-hello-world {main *%=}
+11:56:25 $ spede-run  -d
+The SPEDE Target will be reset, are you sure? (y/n) y
+Resetting the SPEDE Target...
+Downloading image 'build/random-os.dli' to SPEDE Target via /dev/pts/1...
+File type is 'ELF'
+Total blocks to download:  0x8a  (128 bytes each)
+
+Load Successful ; Code loaded at 0x0x101000 (2216 bytes/sec)
+Executing the image 'build/random-os.dli' on the SPEDE Target with GDB Enabled
+Launching GDB...
+Reading symbols from build/random-os.dli...
+Expanding full symbols from build/random-os.dli...
+Remote debugging using /dev/pts/1
+0x0010255d in breakpoint ()
+Temporary breakpoint 1 at 0x101183: file src/hello.c, line 5.
+
+Temporary breakpoint 1, main () at src/hello.c:5
+5	    printf("Hello, world!\n");
+SPEDE GDB$ run
+Hello, world!
+Welcome to random-os!
+[Inferior 1 (Remote target) exited normally]
+SPEDE GDB$ quit
+-[spede] ~/phase0-ann1hil8/01-hello-world {main *%=}
+12:00:28 $ 
+
